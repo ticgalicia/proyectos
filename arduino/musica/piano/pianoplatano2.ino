@@ -1,4 +1,4 @@
-#Fuente: https://www.mrelectrouino.com/2019/08/arduino-piano-diy-conductive-paint.html
+//Fuente: https://www.mrelectrouino.com/2019/08/arduino-piano-diy-conductive-paint.html
 
 #include <CapacitiveSensor.h>
 #define buzzer 11
