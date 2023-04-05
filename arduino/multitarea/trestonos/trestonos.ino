@@ -1,6 +1,7 @@
 //fuente: https://forum.arduino.cc/t/any-way-to-program-to-play-multiple-tones/76632/6
-//**Tuve un pequeño y agradable acorde C tocando. Tenga en cuenta que tuve que reproducir un tono separado de cada pin y configuré la placa de prueba como una escalera de resistencia. Reproducir el tono de un pin distorsionó el tono drásticamente.
-**//
+//Tuve un pequeño y agradable acorde C tocando. 
+//Tenga en cuenta que tuve que reproducir un tono separado de cada pin y configuré la placa de prueba como una escalera de resistencia. Reproducir el tono de un pin distorsionó el tono drásticamente.
+//
 
 #include <Tone.h>
 
