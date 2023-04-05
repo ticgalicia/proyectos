@@ -8,5 +8,7 @@ Hay algunas formas de obtener una verdadera salida analógica de un Arduino. La 
 
 El circuito completo está abajo. Hay dos botones que controlan cada uno de los dos tonos. Presionar ambos botones al mismo tiempo genera ambos tonos.
 
+http://ixora.io/images/itp/pcomp/week4/resisitor_ladder_bb.png
+
 arduino conectado a la placa de prueba con dos botones conectados con resistencias pull-up y un lío de resistencias conectadas a un altavoz, conectado a tierra.
 El circuito por sí solo no es suficiente. El código Arduino debe escribirse con cuidado para permitirle cambiar los bits a intervalos precisos. Tuve que hacer algunas pruebas de rendimiento para medir qué tan rápido digitalWritees la función (4 microsegundos), lo cual es muy importante para esta aplicación. Nada es instantáneo con las computadoras y, a veces, eso importa.
