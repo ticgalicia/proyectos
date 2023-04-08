@@ -20,16 +20,27 @@ innovadora para que los principiantes "prueben las aguas" en la preparación de 
 de una flauta real.
 
 Inventario de materiales
+
 ● 8 Resistencias 1kΩ .
+
 ● 1 Piezo.
+
 ● 1 Arduino Uno.
+
 ● 1 vara cilíndrica de madera (35 cm. de largo).
+
 ● 18 cables dupont/jumper macho-hembra.
+
 ● 12 cables dupont/jumper macho-macho.
+
 ● 1 Placa protoboard.
+
 ● Lapiz soldador de estaño.
+
 ● Pegamento.
+
 ● (opcional) Cinta adhesiva, papel afiche decorativo y tijera.
+
 
 Esquemático
 
