@@ -1,4 +1,4 @@
-int buzzerPin = 8; // pin para el altavoz (conecto en serie una resistencia superior a 150 ohmios para proteger la salida de Arduino)
+int buzzerPin = 9; // pin para el altavoz (conecto en serie una resistencia superior a 150 ohmios para proteger la salida de Arduino)
 
 void setup()
 {
