@@ -1,6 +1,7 @@
-//Este ejemplo replica la entrada del puerto D y saca las salidas al B
+//Este ejemplo lee la entrada del puerto D y saca las salidas al B
 //Hasta 8 pulsadores pueden replicarse como salida al puerto b haciendo cientos de combinaciones posibles.
-//Puede implementarse como efectos de luces (mesa de luces)
+//Puede implementarse como efectos de luces (mesa de luces) pues la pulsacion de un pin, puede actuar en las 8 salidas.
+//pueden hacerse multiples combinaciones
 
 byte valorD; //variable lectura del puerto D (leemos todo a la vez)
 
@@ -21,16 +22,16 @@ void loop() {
             PORTB=B00000011; //El puerto B coge el valor especificado
         }
        if (valorD == B00000100) { //cuando lea esto
-            PORTB=B00100100; //El puerto B coge el valor especificado
+            PORTB=B10101100; //El puerto B coge el valor especificado
         }
        if (valorD == B00001000) { //cuando lea esto
-            PORTB=B00010010; //El puerto B coge el valor especificado
+            PORTB=B10010010; //El puerto B coge el valor especificado
         }
        if (valorD == B00010000) { //cuando lea esto
-            PORTB=B01011010; //El puerto B coge el valor especificado
+            PORTB=B01000001; //El puerto B coge el valor especificado
         }
        if (valorD == B00100000) { //cuando lea esto
-            PORTB=B11011010; //El puerto B coge el valor especificado
+            PORTB=B11001011; //El puerto B coge el valor especificado
         }
        if (valorD == B01000000) { //cuando lea esto
             PORTB=B11011010; //El puerto B coge el valor especificado
