@@ -1,6 +1,6 @@
 //Fuente: https://www.uruktech.com/experiments/capacitive-touch-arduino-keyboard-piano/
 #include <CapacitiveSensor.h>
-#include “pitches.h”
+#include "pitches.h"
 #define COMMON_PIN 2 // The common ‘send’ pin for all keys
 #define BUZZER_PIN A4 // The output pin for the piezo buzzer
 #define NUM_OF_SAMPLES 10 // Higher number whens more delay but more consistent readings
