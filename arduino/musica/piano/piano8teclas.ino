@@ -14,19 +14,20 @@ int notes[]={NOTE_C4,NOTE_D4,NOTE_E4,NOTE_F4,NOTE_G4,NOTE_A4,NOTE_B4,NOTE_C5}; /
 //int notes[]={NOTE_C4,NOTE_DS4,NOTE_F4,NOTE_FS4,NOTE_G4,NOTE_AS4,NOTE_C5,NOTE_DS5}; // C Blues scale
 // Defines the pins that the keys are connected to:
 CapacitiveSensor keys[] = {CS(3), CS(4), CS(5), CS(6), CS(7), CS(8), CS(9), CS(10)};
-void setup
-// Turn off autocalibrate on all channels:
-for(int i=0; i<8; ++i) {
-keys[i].set_CS_AutocaL_Millis(0xFFFFFFFF);
-// Set the buzzer as an output:
-pinMode(BUZZER_PIN, OUTPUT);
+void setup(){
+  // Turn off autocalibrate on all channels:
+  for(int i=0; i<8; ++i) {
+    keys[i].set_CS_AutocaL_Millis(0xFFFFFFFF);
+    // Set the buzzer as an output:
+    pinMode(BUZZER_PIN, OUTPUT);
+  }
 }
 void loop() {
-// Loop through each key:
-for (int i = 0; i < 8; ++i) {
-// If the capacitance reading is greater than the threshold, play a note:
-if(keys[i].capacitiveSensor(NUM_OF_SAMPLES) > CAP_THRESHOLD) {
-tone(BUZZER_PIN, notes[i]); // Plays the note corresponding to the key pressed
-}
-}
+  // Loop through each key:
+  for (int i = 0; i < 8; ++i) {
+    // If the capacitance reading is greater than the threshold, play a note:
+      if(keys[i].capacitiveSensor(NUM_OF_SAMPLES) > CAP_THRESHOLD) {
+      tone(BUZZER_PIN, notes[i]); // Plays the note corresponding to the key pressed
+      }
+  }
 }
