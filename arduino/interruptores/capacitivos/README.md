@@ -1,5 +1,7 @@
 Fuente:https://playground.arduino.cc/Code/CapacitiveSensor/
 
+Esplicacion a fichero: arduinoccOriginal.ino
+
 Sensores capacitivos nativos sin hardware adicional
 Puede crear una entrada sensible al tacto en cualquiera de los pines de Arduino. No requiere hardware especial, sin embargo se recomienda un capacitor de 1nF en línea con el pin para desacoplar ruidos de 50Hz.
 
