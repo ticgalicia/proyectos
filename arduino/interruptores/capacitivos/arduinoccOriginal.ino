@@ -1,34 +1,32 @@
 //FUente: https://playground.arduino.cc/Code/CapacitiveSensor/
 
-// readCapacitivePin
+// Entrada: número de pin de Arduino 
 
-//  Input: Arduino pin number
+// Salida: un número, del 0 al 17 que expresa 
 
-//  Output: A number, from 0 to 17 expressing
+// cuánta capacitancia hay en el pin 
 
-//  how much capacitance is on the pin
+// Cuando toca el pin, o lo que sea que tenga 
 
-//  When you touch the pin, or whatever you have
+// adjunto, el el número aumentará 
 
-//  attached to it, the number will get higher
-
-#include "pins_arduino.h" // Arduino pre-1.0 needs this
+#include "pins_arduino.h" // Arduino pre-1.0 necesita este
 
 uint8_t readCapacitivePin(int pinToMeasure) {
 
-  // Variables used to translate from Arduino to AVR pin naming
+  // Variables utilizadas para traducir de Arduino a AVR pin naming 
 
   volatile uint8_t* port;
 
   volatile uint8_t* ddr;
 
   volatile uint8_t* pin;
+  
+  // Aquí traducimos el número de pin de entrada del 
 
-  // Here we translate the input pin number from
+  // número de pin de Arduino al AVR PORT, PIN, DDR, 
 
-  //  Arduino pin number to the AVR PORT, PIN, DDR,
-
-  //  and which bit of those registers we care about.
+  // y qué bits de esos registros nos interesan. 
 
   byte bitmask;
 
@@ -40,7 +38,7 @@ uint8_t readCapacitivePin(int pinToMeasure) {
 
   pin = portInputRegister(digitalPinToPort(pinToMeasure));
 
-  // Discharge the pin first by setting it low and output
+ // Descarga el pin primero configurándolo bajo y salida 
 
   *port &= ~(bitmask);
 
@@ -50,23 +48,21 @@ uint8_t readCapacitivePin(int pinToMeasure) {
 
   uint8_t SREG_old = SREG; //back up the AVR Status Register
 
-  // Prevent the timer IRQ from disturbing our measurement
+  //Evita que el IRQ del temporizador perturbe nuestra medición
 
   noInterrupts();
 
-  // Make the pin an input with the internal pull-up on
+  // Hacer que el pin sea una entrada con el pull-up interno en 
 
   *ddr &= ~(bitmask);
 
   *port |= bitmask;
 
+  // Ahora vea cuánto tiempo se levanta el alfiler. Este despliegue manual del bucle 
 
+  // disminuye el número de ciclos de hardware entre cada lectura del pin, 
 
-  // Now see how long the pin to get pulled up. This manual unrolling of the loop
-
-  // decreases the number of hardware cycles between each read of the pin,
-
-  // thus increasing sensitivity.
+  // aumentando así la sensibilidad. 
 
   uint8_t cycles = 17;
 
@@ -104,31 +100,25 @@ uint8_t readCapacitivePin(int pinToMeasure) {
 
   else if (*pin & bitmask) { cycles = 16;}
 
-
-
-  // End of timing-critical section; turn interrupts back on if they were on before, or leave them off if they were off before
-
+  // Fin de la sección de tiempo crítico; volver a activar las interrupciones si estaban activadas antes, o dejarlas desactivadas si estaban desactivadas antes de
+ 
   SREG = SREG_old;
 
+  // Descargue el pin nuevamente configurándolo bajo y salida 
 
+  // Es importante dejar los pines bajos si quiere 
 
-  // Discharge the pin again by setting it low and output
+  // poder tocar más de 1 sensor a la vez - si 
 
-  //  It's important to leave the pins low if you want to 
+  // el sensor se deja alto, cuando toca 
 
-  //  be able to touch more than 1 sensor at a time - if
+  // dos sensores, su cuerpo transferirá la carga entre 
 
-  //  the sensor is left pulled high, when you touch
-
-  //  two sensors, your body will transfer the charge between
-
-  //  sensors.
+  // sensores.
 
   *port &= ~(bitmask);
 
   *ddr  |= bitmask;
-
-
 
   return cycles;
 
