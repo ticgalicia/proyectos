@@ -1,4 +1,5 @@
 //se detecta la pulsación multiple
+//fuente:https://github.com/AMPWorks/ArduinoLibs/blob/master/MPR121/examples/MPR121Multiple/MPR121Multiple.ino
 
 /*
  * Written by Adam Phelps, amp@cs.stanford.edu, 2013-2014
