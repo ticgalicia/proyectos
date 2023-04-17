@@ -1,4 +1,5 @@
 //Fuente: http://ixora.io/itp/pcomp/experiments-with-sound/
+//fUENTE: https://youtu.be/lsEIqzg-ypA
 void setup() {
   // configurar pines de entrada/salida...
 
