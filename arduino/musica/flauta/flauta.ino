@@ -1,5 +1,7 @@
 //fuente: https://interorganic.com.ar/josx/Flauta.pdf
 
+//no probado. www.ticgalicia.com
+
 void setup()
 {
   pinMode( 10 , INPUT);
