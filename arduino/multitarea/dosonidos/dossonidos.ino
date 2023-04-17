@@ -1,5 +1,8 @@
 //Fuente: http://ixora.io/itp/pcomp/experiments-with-sound/
 //fUENTE: https://youtu.be/lsEIqzg-ypA
+
+const int FREQ0 = 523;
+const int FREQ1 = 1046;
 void setup() {
   // configurar pines de entrada/salida...
 
