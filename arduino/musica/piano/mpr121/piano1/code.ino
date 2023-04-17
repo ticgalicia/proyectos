@@ -1,3 +1,6 @@
+//Test ok. www.ticgalicia.com 17/04/23
+
+
 /*********************************************************
 This is a library for the MPR121 12-channel Capacitive touch sensor
 
