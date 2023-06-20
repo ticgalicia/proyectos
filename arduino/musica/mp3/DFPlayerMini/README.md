@@ -2,6 +2,8 @@ Fuente: https://www.taloselectronics.com/blogs/tutoriales/como-usar-dfplayer-mod
 
 Ejemplos: https://www.youtube.com/watch?v=Hoot1hKMlR0
 
+Dfplayer sin aruino: https://www.youtube.com/watch?v=_B01IQXPy7s
+
 ¿Como usar DFPlayer Modulo reproductor mp3 con arduino? - Tutorial
 El modulo DFPlayer Mini es un reproductor de audio económico que podemos conectar fácilmente con a un microcontrolador y tarjetas Arduino para reproducir audio en formato MP3.
 
