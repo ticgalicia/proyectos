@@ -1,5 +1,6 @@
 // fuente https://github.com/gabo2151/PCreativa/blob/master/Flauta/flauta_05/flauta_05.ino
 // https://luthiersxxi.home.blog/2019/07/02/la-flauta-magica/
+//imagen flauta_scheme.png
 
 //-----------DECLARACIONES-------------------------------------
 #include <MIDI.h>
